@@ -6,7 +6,7 @@ import random
 
 set_website_title("Pokemon Fight")
 
-add_website_css("body","font-size: 8px;")
+add_website_css("body","font-size: 4px;")
 
 #set_site_information
 
