@@ -6,6 +6,8 @@ import random
 
 set_website_title("Pokemon Fight")
 
+add_website_css("website","30px;")
+
 #set_site_information
 
 
