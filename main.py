@@ -292,7 +292,7 @@ def pick_opponent(state: State) -> Page:
         "Though, at a moment's notice they could be: ",
         TextBox("their_name",state.enemy),
         "and your name could be: ",
-        TextBox("you_name",state.you\),
+        TextBox("you_name",state.you),
         "\n",
         "\n",
         "\n",
