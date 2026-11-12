@@ -128,6 +128,7 @@ def make_pokemon(pokemon: int)-> Pokemon:
         return Pokemon("Oddish",test_attacks,"grass",50,50,0.5,give_sprite(2))
     if pokemon == 3:
         return Pokemon("Seedot",test_attacks,"grass",75,75,0.5,give_sprite(3))
+    return Pokemon("Pikachu",test_attacks,"electric",100,100,0.5,give_sprite(0))
 
 
 pikachu = Pokemon("Pikachu",test_attacks,"electric",100,100,0.5,give_sprite(0))
@@ -161,6 +162,7 @@ def switch_pokemon(state: State, pokemon: int,change: int) -> Pokemon:
         if state.picked3 < 0:
             state.picked3 = len(pokemon_list) - 1
         return make_pokemon(state.picked3)
+    return make_pokemon(state.picked1)
     
 def calc_attack(state: State, attack_num: int) -> bool:
     state.action = state.you_pokemon[0].name + " has used " + str(state.you_pokemon[0].attacks[attack_num].name) + " " 
