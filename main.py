@@ -6,11 +6,9 @@ import random
 
 set_website_title("Pokemon Fight")
 
-add_website_css("body","font-size: 8px;")
-
 #set_site_information
 
-
+add_website_css("body","font-size: 8px;")
 
 
 '''
@@ -319,7 +317,19 @@ def pick_opponent(state: State) -> Page:
 
 
 @route
-def opponent_update(state: State, their_name: str, you_name: str) -> Page:
+def opponent_update(state: State, their_name: str, you_name: str, choice: str) -> Page:
+        for index, poketype in ennumerate(state.you_pokemon):
+            if poketype.element == "electric":
+                state.enemy_pokemon[index] == make_pokemon(1)
+            elif poketype.element == "fire":
+                state.enemy_pokemon[index] == make_pokemon(2)
+            elif poketype.element == "water":
+                state.enemy_pokemon[index] == make_pokemon(1)
+            elif poketype.element == "grass":
+                state.enemy_pokemon[index] == make_pokemon(2)                
+            else:
+                state.enemy_pokemon[index] == make_pokemon(1)                 
+        
         state.you = you_name
         state.enemy = their_name
         return pick_opponent(state)
