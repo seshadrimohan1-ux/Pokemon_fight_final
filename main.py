@@ -318,7 +318,7 @@ def pick_opponent(state: State) -> Page:
 
 @route
 def opponent_update(state: State, their_name: str, you_name: str, choice: str) -> Page:
-        for index, poketype in ennumerate(state.you_pokemon):
+        for index, poketype in enumerate(state.you_pokemon):
             if poketype.element == "electric":
                 state.enemy_pokemon[index] == make_pokemon(1)
             elif poketype.element == "fire":
