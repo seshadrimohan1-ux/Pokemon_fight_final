@@ -399,21 +399,37 @@ def opponent_update(state: State, their_name: str, you_name: str, choice: str) -
     but will effect what pokemon they choose eventually)
     '''
     for index, poketype in enumerate(state.you_pokemon):
-        if poketype.element == "electric":
-                state.enemy_pokemon[index] = make_pokemon(2)
-        elif poketype.element == "fire":
-                state.enemy_pokemon[index] = make_pokemon(2)
-        elif poketype.element == "water":
-                state.enemy_pokemon[index] = make_pokemon(1)
-        elif poketype.element == "grass":
-                state.enemy_pokemon[index] = make_pokemon(1)                
+        if choice == "hard":
+            for index, poketype in enumerate(state.you_pokemon):
+                if poketype.element == "electric":
+                        state.enemy_pokemon[index] = make_pokemon(2)
+                elif poketype.element == "fire":
+                        state.enemy_pokemon[index] = make_pokemon(2)
+                elif poketype.element == "water":
+                        state.enemy_pokemon[index] = make_pokemon(1)
+                elif poketype.element == "grass":
+                        state.enemy_pokemon[index] = make_pokemon(1)                
+                else:
+                        state.enemy_pokemon[index] = make_pokemon(1)
+        elif choice =="easy":
+            for index, poketype in enumerate(state.you_pokemon):
+                if poketype.element == "electric":
+                        state.enemy_pokemon[index] = make_pokemon(2)
+                elif poketype.element == "fire":
+                        state.enemy_pokemon[index] = make_pokemon(2)
+                elif poketype.element == "water":
+                        state.enemy_pokemon[index] = make_pokemon(1)
+                elif poketype.element == "grass":
+                        state.enemy_pokemon[index] = make_pokemon(1)                
+                else:
+                        state.enemy_pokemon[index] = make_pokemon(1)
         else:
-                state.enemy_pokemon[index] = make_pokemon(1)
-        print(state.enemy_pokemon[index])
+            for index, poketype in enumerate(state.you_pokemon):
+                state.enemy_pokemon[index] = make_pokemon(2)
         
-        state.you = you_name
-        state.enemy = their_name
-        return pick_opponent(state)
+    state.you = you_name
+    state.enemy = their_name
+    return pick_opponent(state)
         
         
 
