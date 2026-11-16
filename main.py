@@ -7,15 +7,11 @@ import random
 set_website_title("Pokemon Fight")
 
 set_site_information(
-    author="Mohan Seshadri"
-    description="pokemon fighting simulator"
-    sources=["all by Mohan Seshadri"]
-    planning=["planned out routes and pages on paper"]
-    links=["https://github.com"]
-
-
-
-    
+    author="Mohan Seshadri",
+    description="pokemon fighting simulator",
+    sources=["all by Mohan Seshadri"],
+    planning=["planned out routes and pages on paper"],
+    links=["https://github.com"]   
 )
 
 add_website_css("body","font-size: 8px;")
