@@ -11,7 +11,7 @@ set_site_information(
     description="pokemon fighting simulator",
     sources=["all by Mohan Seshadri"],
     planning=["planned out routes and pages on paper"],
-    links=["https://github.com"]   
+    links=["https://github.com/seshadrimohan1-ux/Pokemon_fight_final"]   
 )
 
 add_website_css("body","font-size: 8px;")
