@@ -72,7 +72,28 @@ seedot_sprite = Sprite(    "⬛⬛⬛⬛⬛⬛⬛⬛",
                            "⬛🟫🟫🟫🟫🟫🟫⬛",
                            "⬛⬛🟫🟫🟫🟫⬛⬛",
                 )
-sprites = [pikachu_sprite,voltorb_sprite,oddish_sprite,seedot_sprite]
+
+
+torchic_sprite = Sprite(   "⬛⬛⬛⬛⬛⬛⬛🟥",
+                           "⬛⬛🟧🟧🟧🟧🟥⬛",
+                           "⬛🟧⬛🟧🟧⬛🟧⬛",
+                           "⬛🟨🟨🟨🟧🟧🟧⬛",
+                           "⬛⬛🟧🟧🟧🟧⬛⬛",                         
+                           "⬛🟧🟧🟧🟧🟧🟥🟥",
+                           "⬛🟧🟧🟧🟧🟧🟥⬛",
+                           "⬛⬛🟧🟧🟧🟧⬛⬛",
+                )
+
+mudkip_sprite = Sprite(    "⬛⬛🟦🟦🟦🟦⬛⬛",
+                           "⬛🟦⬛🟦🟦⬛🟦⬛",
+                           "⬛🟧🟦🟦🟦🟦🟧⬛",
+                           "⬛🟧🟧⬛⬛🟧🟧⬛",
+                           "⬛⬛🟦🟦🟦🟦⬛⬛",                         
+                           "⬛🟦🟦🟦🟦🟦🟦⬛",
+                           "⬛🟦🟦🟦🟦🟦🟦⬛",
+                           "⬛⬛🟦🟦🟦🟦⬛⬛",
+                )
+sprites = [pikachu_sprite,voltorb_sprite,oddish_sprite,seedot_sprite,torchic_sprite,mudkip_sprite]
 
 def give_sprite(ind: int)->Sprite:
     return sprites[ind]
@@ -145,6 +166,11 @@ def make_pokemon(pokemon: int)-> Pokemon:
         return Pokemon("Oddish",test_attacks,"grass",50,50,0.5,give_sprite(2))
     if pokemon == 3:
         return Pokemon("Seedot",test_attacks,"grass",75,75,0.5,give_sprite(3))
+    if pokemon == 4:
+        return Pokemon("Torchic",test_attacks,"fire",75,75,0.3,give_sprite(4))
+    if pokemon == 5:
+        return Pokemon("Mudkip",test_attacks,"water",125,125,0.3,give_sprite(5))
+    
     return Pokemon("Pikachu",test_attacks,"electric",100,100,0.5,give_sprite(0))
 
 assert_equal(make_pokemon(0),Pokemon("Pikachu",test_attacks,"electric",100,100,0.5,give_sprite(0)))
@@ -152,11 +178,13 @@ assert_equal(make_pokemon(1),Pokemon("Electrode",test_attacks,"electric",200,200
 
 
 pikachu = Pokemon("Pikachu",test_attacks,"electric",100,100,0.5,give_sprite(0))
-electrode = Pokemon("Electrode",test_attacks,"electric",200,200,0.5,give_sprite(1))
+electrode = Pokemon("Electrode",test_attacks,"electric",150,150,0.5,give_sprite(1))
 oddish = Pokemon("Oddish",test_attacks,"grass",50,50,0.5,give_sprite(2))
 seedot = Pokemon("Seedot",test_attacks,"grass",75,75,0.5,give_sprite(3))
+torchic = Pokemon("Torchic",test_attacks,"fire",75,75,0.3,give_sprite(4))
+mudkip = Pokemon("Mudkip",test_attacks,"water",125,125,0.3,give_sprite(5))
 
-pokemon_list = [pikachu,electrode,oddish,seedot]
+pokemon_list = [pikachu,electrode,oddish,seedot,torchic,mudkip]
 
 
 
